@@ -1,0 +1,22 @@
+{
+  "name": "quest",
+  "version": "1.0.0",
+  "description": "Repositório contendo os arquivos iniciais do projeto de Fetch e GitHub API\r # -Projeto-mundo-real-com-Fetch-e-GitHub",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "babel-jest": "^29.4.1",
+    "jest": "^29.3.1"
+  }
+}
