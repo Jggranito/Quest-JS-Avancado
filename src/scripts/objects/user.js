@@ -6,7 +6,8 @@ const user = {
     followers: '',
     following: '',
     repositories: [],
-    setInfo(gitHubUser){
+    events: [],
+    setInfo(gitHubUser) {
         this.avatarUrl = gitHubUser.avatar_url
         this.name = gitHubUser.name
         this.bio = gitHubUser.bio
@@ -14,8 +15,18 @@ const user = {
         this.followers = gitHubUser.followers
         this.following = gitHubUser.following
     },
-    setRepositories(repositories){
+    setRepositories(repositories) {
         this.repositories = repositories
+    },
+    setEvents(events) {
+        console.log(events)
+        this.events = []
+        events.forEach(e => {
+            if (e.type === "PushEvent" || e.type === "CreateEvent") {
+                this.events.push(e)
+            }
+        })
+        if(this.events.length > 10) this.events.length = 10
     }
 }
 
