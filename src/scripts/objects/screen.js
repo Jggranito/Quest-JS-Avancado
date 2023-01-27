@@ -10,12 +10,26 @@ const screen = {
                                         </div>
                                     </div>`
         let repositoriesItens = ""
-        user.repositories.forEach(repo => repositoriesItens += `<li><a href="${repo.html_url}" target="_bank">${repo.name}</a></li>`)
+        user.repositories.forEach(repo => repositoriesItens += `<li>
+                                                                    <a href="${repo.html_url}"target="_bank">${repo.name}
+                                                                        <ul>
+                                                                            <li>🍴${repo.forks_count}</li>
+                                                                            <li>⭐${repo.stargazers_count}</li>
+                                                                            <li>👀${repo.watchers_count}</li>
+                                                                            <li>👨🏽‍💻${repo.language}</li>
+                                                                        </ul>
+                                                                    </a>
+                                                                </li>`)
 
         let eventsItens = ""
         user.events.forEach(event => {
             if (event.type === "PushEvent") {
-                eventsItens += `<li><p class="event"><strong>${event.repo.name}</strong>-${event.payload.commits[0].message}</p></li>`
+                eventsItens += `<li>
+                                    <p class="event">
+                                        <strong>${event.repo.name}</strong>
+                                        -${event.payload.commits[0].message}
+                                    </p>
+                                </li>`
             } else if (event.type === "CreateEvent") {
                 eventsItens += `<li><p class="event"><strong>${event.repo.name}</strong>-${event.payload.description ?? 'Sem descrição 😥'}</p></li>`
             }
@@ -23,7 +37,7 @@ const screen = {
 
         if (user.repositories.length > 0) {
             this.userProfile.innerHTML += `<div class="repositories section">
-                                            <h2>Repositorios</h2>
+                                            <h2>Repositórios</h2>
                                             <ul>${repositoriesItens}</ul>
                                            </div>
                                            <div class="events section">

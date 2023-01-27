@@ -143,9 +143,25 @@ main {
   transition: 0.3s ease-in-out;
 }
 
+.container .profile-data .repositories ul li a:hover ul li{
+  background-color:#fff;
+  color: rgb(12, 12, 12)
+}
+
 .container .profile-data .repositories ul li a:hover{
   background-color:hotpink;
   color: #fff
+}
+
+.container .profile-data .repositories ul li a ul li{
+  padding: 5px;
+  margin: 5px 2px 0px;
+  border: 1px solid grey;
+  background-color: #6662D9;
+  color: #fff;
+  display: block;
+  border-radius: 7px;
+  transition: 0.3s ease-in-out;
 }
 
 .container .profile-data.hide{
