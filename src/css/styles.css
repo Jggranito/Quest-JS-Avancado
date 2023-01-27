@@ -176,12 +176,16 @@ main {
 }
 
 .container .profile-data .events ul li{
-  margin: 20px;
+  margin: 30px;
 }
 
 .container .profile-data .events ul li strong{
   font-weight: 700;
   margin-right: 10px;
+}
+
+.container .profile-data .events.section{
+  padding-top: 0px
 }
 
 @media (max-width: 1280px) {
