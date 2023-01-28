@@ -19,7 +19,6 @@ const user = {
         this.repositories = repositories
     },
     setEvents(events) {
-        console.log(events)
         this.events = []
         events.forEach(e => {
             if (e.type === "PushEvent" || e.type === "CreateEvent") {
