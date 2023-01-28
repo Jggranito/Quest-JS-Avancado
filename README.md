@@ -55,7 +55,6 @@ A quest consiste em usar a página desenvolvida em um exercício anterior e adic
 - Mobile  -
 
 ![](./src/screenshot/mobile_1.png)
-![](./src/screenshot/mobile_2.png)
 
 ### Links
 
