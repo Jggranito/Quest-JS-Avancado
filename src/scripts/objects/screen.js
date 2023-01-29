@@ -20,7 +20,6 @@ const screen = {
                                                                         </ul>
                                                                     </a>
                                                                 </li>`)
-
         let eventsItens = ""
         user.events.forEach(event => {
             if (event.type === "PushEvent") {
@@ -37,12 +36,12 @@ const screen = {
 
         if (user.repositories.length > 0) {
             this.userProfile.innerHTML += `<div class="repositories section">
-                                            <h2>Repositórios</h2>
-                                            <ul>${repositoriesItens}</ul>
+                                              <h2>Repositórios</h2>
+                                              <ul>${repositoriesItens}</ul>
                                            </div>
                                            <div class="events section">
-                                            <h2>Eventos</h2>
-                                            <ul>${eventsItens}</ul>
+                                              <h2>Eventos</h2>
+                                              <ul>${eventsItens}</ul>
                                            </div>`
         }
     },

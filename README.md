@@ -32,7 +32,6 @@ A quest consiste em usar a página desenvolvida em um exercício anterior e adic
 
 - Solicitação 2:
    Você deve apresentar na tela uma lista com até 10 últimos eventos do usuário no GitHub. Os eventos que serão apresentados são de dois tipos: CreateEvent e PushEvent apenas.
-
    Para cada atividade você deve mostrar o nome do repositório e a mensagem do evento.
 
 - Solicitação 3:
