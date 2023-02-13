@@ -3,8 +3,8 @@ const user = {
     name: '',
     bio: '',
     userName: '',
-    followers: '',
-    following: '',
+    followers: 0,
+    following: 0,
     repositories: [],
     events: [],
     setInfo(gitHubUser) {
@@ -19,13 +19,7 @@ const user = {
         this.repositories = repositories
     },
     setEvents(events) {
-        this.events = []
-        events.forEach(e => {
-            if (e.type === "PushEvent" || e.type === "CreateEvent") {
-                this.events.push(e)
-            }
-        })
-        if(this.events.length > 10) this.events.length = 10
+        this.events = events
     }
 }
 
